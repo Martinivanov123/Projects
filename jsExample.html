@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sumator</title>
+</head>
+<body>
+    <input type="number" id="firstNumber"> +
+    <input type="number" id="secondNumber"> =
+    <input type="number" id="result" readonly>
+    <br>
+    <input type="button" id="calculateButton" value="Sum">
+
+    <script>
+        function sum(){
+            let firstNumber = parseInt(document.getElementById("firstNumber").value);
+            let secondNumber = parseInt(document.getElementById("secondNumber").value);
+
+            document.getElementById("result").value = firstNumber + secondNumber;
+        }
+
+        let calculateButton = document.getElementById("calculateButton");
+        calculateButton.addEventListener("click", sum);
+    </script>
+</body>
+</html>
